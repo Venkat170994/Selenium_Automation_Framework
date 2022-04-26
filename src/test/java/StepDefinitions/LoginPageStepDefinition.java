@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import PageObjects.LoginPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
@@ -7,13 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-public class LoginStepDefinition {
+public class LoginPageStepDefinition {
     WebDriver driver;
-//    LoginPage login_page;
+    LoginPage login_page;
 
     @Then("Login with your browser")
     public void HitGoogleonyourbrowser() throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "D:\\Venkat\\AutomationPractise\\src\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\Venkat\\Learning\\Automation_Framework\\src\\main\\resources\\drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://demo.guru99.com/v4");
